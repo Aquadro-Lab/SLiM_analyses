@@ -14,4 +14,5 @@ Takes in a folder with all the MKT_FWW text output files for a specific paramete
 3. Should we specify on the graph the meaning of the horizontal line and the yellow background?  
 4. Make the horizontal line placement depend on the number of MKT result file inputs (i.e., simulation runs) and not as a set value.  
 5. Add mean alpha values on the line graph?  
-6. There's a "caveats" message that appears when you run the code, which doesn't affect anything, but would be nice if it went away :)
+6. Can we draw your eyes to the Dn/Ds > Pn/Ps side of the scatterplot?  
+7. There's a "caveats" message that appears when you run the code, which doesn't affect anything, but would be nice if it went away :)
