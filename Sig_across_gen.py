@@ -9,8 +9,12 @@ from matplotlib.offsetbox import AnchoredText
 import sys
 import argparse
 
-
 #python sig_across_gen PATH, FIG_TITLE, WOL_INTERVAL, WOL_FIRST
+
+if __name__ == '__main__':
+    p = argparse.ArgumentParser(description='...')
+    p.add_argument('--argument', required=False)
+
 
 PATH = sys.argv[1]
 FIG_TITLE = sys.argv[2]
@@ -203,10 +207,12 @@ def sig_across_gens_backcol(path_to_MKT_folder, fig_title, wol_interval, wolfirs
     sns.set(rc={'figure.figsize':(12,3)})
 
 #    linegraph = sns.lineplot(x="Gen", y="# p<0.05", hue="DnDs>PnPs", marker="o", data=sig_graph_df3)
-    linegraph = sns.lineplot(x="Gen", y="# p<0.05", marker="o", data=sig_graph_df4)
+    linegraph = sns.lineplot(x="Gen", y="# p<0.05", marker="o", color='black',data=sig_graph_df4)
     linegraph.set_title(fig_title, fontweight='bold')
     linegraph.axhline(1.25)
-    plt.legend(fontsize='x-small', title_fontsize='6')
+    plt.xlabel("Generation at which MKT analysis is done")
+    plt.ylabel("# of sig simulation runs (p<0.05)")
+#    plt.legend(fontsize='x-small', title_fontsize='6')
     
     def drange(start, stop, step):
         r=start
